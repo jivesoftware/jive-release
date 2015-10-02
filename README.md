@@ -1,15 +1,16 @@
-# jQuery Project Release Automation
+# Jive Release Automation
+Fork of [jquery-release](https://github.com/jquery/jquery-release)
 
-This script automates releases for all jQuery projects. It is designed to create consistency between projects and reduce the burden of maintaining individual release scripts.
+This script automates releases for Jive projects. It is designed to create consistency between projects and reduce the burden of maintaining individual release scripts.
 
 ## Creating a Release
 
 Creating a release is as simple as cloning this repository and telling the script which project to use. In order to ensure a clean and proper release is created, you should always start from a new clone of this repository.
 
 ```sh
-git clone git@github.com:jquery/jquery-release.git
-cd jquery-release
-node release.js --remote=jquery/<project-name>
+git clone git@github.com:jivesoftware/jive-release.git
+cd jive-release
+node release.js --remote=jivesoftware/<project-name>
 ```
 
 ### Testing the Release Script
@@ -221,7 +222,7 @@ The version that will be set in `package.json` after the release.
 
 #### cdnPublish
 
-Which directory contains files to publish to the jQuery CDN. Set to `false` to prevent publishing to the jQuery CDN. Defaults to `"dist/cdn"`.
+Which directory contains files to publish to the jive CDN. Set to `false` to prevent publishing to the jive CDN. Defaults to `"dist/cdn"`.
 
 #### npmPublish
 
