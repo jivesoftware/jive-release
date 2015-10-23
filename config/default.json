@@ -1,0 +1,11 @@
+{
+  	"changelogplease": {
+	  	"sort": false
+	},
+  	"git": {
+	  	"remoteHost": "stash.jiveland.com",
+	  	"tags": {
+		  "prefix": "v"
+		}
+	}
+}

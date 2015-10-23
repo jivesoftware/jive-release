@@ -10,7 +10,7 @@ var commonTasks, stableTasks,
 		},
 
 		complete: function() {
-			console.log( "Release complete." );
+			console.log( "Release of " + Release.readPackage().name + " v" + Release.newVersion + " complete." );
 			console.log( "Please review the project-specific release checklist." );
 		}
 	};
@@ -50,8 +50,9 @@ commonTasks = [
 
 	function( fn ) {
 		if ( Release.cdnPublish ) {
-			Release._section( "publishing to jQuery CDN" )();
+			Release._section( "publishing to CDN" )();
 			Release.walk([
+				Release._cloneCdnRepo,
 				Release._copyCdnArtifacts,
 				Release.confirmReview,
 				Release._pushToCdn

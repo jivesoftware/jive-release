@@ -103,7 +103,7 @@ A function that returns an array of tags to apply to the npm release. Every rele
 
 #### issueTracker
 
-Which type of issue tracker is being used for the project. Must be either `"trac"` or `"github"`.
+Which type of issue tracker is being used for the project. Must be either `"trac"`, `"github"` or `"jira"`.
 
 #### contributorReportId
 
@@ -171,6 +171,14 @@ Gets the contents of `package.json` as an object.
 
 Saves `package` to `package.json`, preserving indentation style.
 
+#### repositoryUrl()
+
+Returns the human browseable HTTP repository URL
+
+#### repositoryCommitBaseUrl
+
+Returns the human browseable HTTP base URL for commits
+
 #### walk( methods, done )
 
 Executes the array of `methods` (minimum one element) step by step. For any given method, if that method accepts arguments (`method.length > 0`), it will pass a callback that the method needs to execute when done, making the method call async. Otherwise the method is assumed to be sync and the next method runs immediately.
@@ -227,6 +235,10 @@ Which directory contains files to publish to the jive CDN. Set to `false` to pre
 #### npmPublish
 
 Set to `true` to publish a release via npm. Defaults to `false`.
+
+#### npmShrinkwrap
+
+Set to `true` to shrinkwrap npm dependencies. Defaults to `false`.
 
 #### tagTime
 
